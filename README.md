@@ -8,14 +8,14 @@ Mini_Project:Apartment Management System
 
 <div align="center">
 
-![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?style=for-the-badge&logo=react)
-![PHP](https://img.shields.io/badge/Backend-PHP%20(PDO)-777BB4?style=for-the-badge&logo=php)
-![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Vite](https://img.shields.io/badge/Build-Vite%205-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Style-TailwindCSS%203-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+[![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?style=for-the-badge&logo=react)](#)
+[![PHP](https://img.shields.io/badge/Backend-PHP%20(PDO)-777BB4?style=for-the-badge&logo=php)](#)
+[![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](#)
+[![Vite](https://img.shields.io/badge/Build-Vite%205-646CFF?style=for-the-badge&logo=vite&logoColor=white)](#)
+[![TailwindCSS](https://img.shields.io/badge/Style-TailwindCSS%203-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](#)
 
-![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)
-![Platform](https://img.shields.io/badge/Platform-XAMPP-orange?style=flat-square)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)](#)
+[![Platform](https://img.shields.io/badge/Platform-XAMPP-orange?style=flat-square)](#)
 
 </div>
 
