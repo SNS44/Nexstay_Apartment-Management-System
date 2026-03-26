@@ -449,7 +449,7 @@ Contributions are welcome! Here's how:
 ---
 
 <p align="center">
-  <b>Built with ❤️ using React + PHP + MySQL</b>
+  <b>Built with 🤍using React + PHP + MySQL</b>
   <br/>
-  <sub>⭐ If this project helped you, consider giving it a star!</sub>
+  
 </p>
