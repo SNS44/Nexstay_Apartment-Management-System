@@ -6,18 +6,18 @@ Mini_Project:Apartment Management System
   <b>A modern, full-stack web application for managing apartments, bookings, payments, and tenant services.</b>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Frontend-React%2018-61DAFB?style=for-the-badge&logo=react" alt="React"/>
-  <img src="https://img.shields.io/badge/Backend-PHP%20(PDO)-777BB4?style=for-the-badge&logo=php" alt="PHP"/>
-  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Build-Vite%205-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
-  <img src="https://img.shields.io/badge/Style-TailwindCSS%203-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="Version"/>
-  <img src="https://img.shields.io/badge/Platform-XAMPP-orange?style=flat-square" alt="Platform"/>
-</p>
+![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB?style=for-the-badge&logo=react)
+![PHP](https://img.shields.io/badge/Backend-PHP%20(PDO)-777BB4?style=for-the-badge&logo=php)
+![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Vite](https://img.shields.io/badge/Build-Vite%205-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Style-TailwindCSS%203-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-XAMPP-orange?style=flat-square)
+
+</div>
 
 ---
 
@@ -32,7 +32,6 @@ Mini_Project:Apartment Management System
 - [📖 User Guide](#-user-guide)
 - [🔧 Admin Guide](#-admin-guide)
 - [🗄️ Database Schema](#️-database-schema)
-- [🔌 API Reference](#-api-reference)
 - [🛠️ Configuration](#️-configuration)
 - [🤝 Contributing](#-contributing)
 
@@ -386,73 +385,6 @@ The `database.sql` includes:
 - **15 Rooms** (3 rooms per floor)
   - Floors 1–4: ₹15,000/month
   - Floor 5 (Premium): ₹18,000/month with terrace access
-
----
-
-## 🔌 API Reference
-
-All API endpoints are PHP files located in the `/api` directory. They accept and return JSON.
-
-### Authentication
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST` | `/api/register.php` | Register a new user |
-| `GET/POST` | `/api/login.php` | Login (creates session) |
-| `GET/POST` | `/api/logout.php` | Destroy session |
-| `GET/POST` | `/api/user_current.php` | Get current logged-in user |
-
-### Rooms
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST` | `/api/rooms.php` | List all rooms (with filters) |
-| `GET/POST` | `/api/room_get.php?id=X` | Get room details by ID |
-| `GET/POST` | `/api/room_create.php` | Admin: Create a room |
-| `GET/POST` | `/api/room_update.php` | Admin: Update a room |
-| `GET/POST` | `/api/room_delete.php` | Admin: Delete a room |
-| `GET/POST` | `/api/room_availability.php` | Check room availability |
-
-### Bookings
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST` | `/api/booking_create.php` | Create a booking request |
-| `GET/POST` | `/api/booking_approve.php` | Admin: Approve a booking |
-| `GET/POST` | `/api/booking_cancel.php` | Cancel a booking |
-| `GET/POST` | `/api/bookings_user.php` | List current user's bookings |
-| `GET/POST` | `/api/bookings_admin.php` | Admin: List all bookings |
-
-### Payments
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST` | `/api/payment_initiate.php` | Initiate a payment |
-| `GET/POST` | `/api/payment_update.php` | Update payment details |
-| `GET/POST` | `/api/payment_verify.php` | Admin: Verify a payment |
-| `GET/POST` | `/api/payments_user.php` | List current user's payments |
-| `GET/POST` | `/api/payments_admin.php` | Admin: List all payments |
-
-### Service Requests
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST` | `/api/service_create.php` | Submit a service request |
-| `GET/POST` | `/api/service_status_update.php` | Update request status |
-| `GET/POST` | `/api/services_user.php` | List user's service requests |
-| `GET/POST` | `/api/services_admin.php` | Admin: List all requests |
-
-### Users & Admin
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST` | `/api/user_update.php` | Update profile info |
-| `GET/POST` | `/api/user_update_password.php` | Change password |
-| `GET/POST` | `/api/users_admin.php` | Admin: List all users |
-| `GET/POST` | `/api/user_manage.php` | Admin: Manage user account |
-| `GET/POST` | `/api/admin_summary.php` | Admin: Dashboard stats |
-| `GET/POST` | `/api/residents_admin.php` | Admin: List residents |
-| `GET/POST` | `/api/activity_admin.php` | Admin: Activity logs |
 
 ---
 
