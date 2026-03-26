@@ -67,7 +67,6 @@ Mini_Project:Apartment Management System
 - **Glassmorphism UI** — Premium frosted-glass aesthetic throughout
 - **Animated Background** — Dynamic particle animation system
 - **Responsive Design** — Works seamlessly on desktop, tablet, and mobile
-- **Dark Theme** — Eye-friendly dark mode with violet/purple accent palette
 - **Micro-Animations** — Smooth transitions and hover effects using Framer Motion
 
 ---
