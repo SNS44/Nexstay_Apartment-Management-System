@@ -15,7 +15,6 @@ Mini_Project:Apartment Management System
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/>
   <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="Version"/>
   <img src="https://img.shields.io/badge/Platform-XAMPP-orange?style=flat-square" alt="Platform"/>
 </p>
@@ -220,8 +219,8 @@ By default, there is no hardcoded admin account for security reasons.
 ### Creating an Admin Account
 
 1. Register a normal user account at [http://localhost:5173/auth](http://localhost:5173/auth) using:
-   - **Email:** `admin@nexstay.com`
-   - **Password:** `admin123`
+   - **Email:** `ssn@nexstay.com`
+   - **Password:** `1234`
 2. Open **phpMyAdmin** → select `nexstay` database → `users` table
 3. Change the user's `role` from `user` to `admin`
 4. You can now login to the admin panel using this username and password.
@@ -229,6 +228,10 @@ By default, there is no hardcoded admin account for security reasons.
 ### Creating a Regular User
 
 Simply register at [http://localhost:5173/auth](http://localhost:5173/auth). New accounts are created with the `user` role by default.
+
+For example, you can register a normal user using:
+   - **Email:** `normaluser@nexstay.com`
+   - **Password:** `1234`
 
 ---
 
