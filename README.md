@@ -25,9 +25,7 @@ Mini_Project:Apartment Management System
 ## 📋 Table of Contents
 
 - [✨ Features](#-features)
-- [🖼️ Screenshots](#️-screenshots)
 - [🏗️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
 - [⚙️ Prerequisites](#️-prerequisites)
 - [🚀 Installation & Setup](#-installation--setup)
 - [▶️ Running the Application](#️-running-the-application)
@@ -37,9 +35,7 @@ Mini_Project:Apartment Management System
 - [🗄️ Database Schema](#️-database-schema)
 - [🔌 API Reference](#-api-reference)
 - [🛠️ Configuration](#️-configuration)
-- [❓ Troubleshooting](#-troubleshooting)
 - [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
 
 ---
 
@@ -94,108 +90,6 @@ Mini_Project:Apartment Management System
 │  Server      │  Apache (XAMPP)                   │
 │  Build Tool  │  Vite 5                           │
 └──────────────┴───────────────────────────────────┘
-```
-
----
-
-## 📁 Project Structure
-
-```
-Apart/
-├── api/                        # PHP Backend (REST API)
-│   ├── config.php              # Database connection & schema auto-fix
-│   ├── helpers.php             # Shared utility functions
-│   ├── login.php               # User login endpoint
-│   ├── register.php            # User registration endpoint
-│   ├── logout.php              # Session logout
-│   ├── user_current.php        # Get current logged-in user
-│   ├── user_update.php         # Update user profile
-│   ├── user_update_password.php# Change password
-│   ├── user_manage.php         # Admin: manage user accounts
-│   ├── user_activity.php       # Log user activity
-│   ├── users_admin.php         # Admin: list all users
-│   ├── rooms.php               # List rooms (with filters)
-│   ├── room_get.php            # Get single room details
-│   ├── room_create.php         # Admin: create room
-│   ├── room_update.php         # Admin: update room
-│   ├── room_delete.php         # Admin: delete room
-│   ├── room_manage.php         # Admin: room management
-│   ├── room_availability.php   # Check room availability
-│   ├── room_sync.php           # Sync room statuses
-│   ├── booking_create.php      # Create booking request
-│   ├── booking_approve.php     # Admin: approve booking
-│   ├── booking_cancel.php      # Cancel booking
-│   ├── booking_dismiss.php     # Dismiss booking
-│   ├── booking_update.php      # Update booking
-│   ├── bookings_admin.php      # Admin: list all bookings
-│   ├── bookings_user.php       # User: list own bookings
-│   ├── payment_initiate.php    # Initiate a payment
-│   ├── payment_update.php      # Update payment status
-│   ├── payment_verify.php      # Admin: verify payment
-│   ├── payments_admin.php      # Admin: list all payments
-│   ├── payments_user.php       # User: list own payments
-│   ├── service_create.php      # Create service request
-│   ├── service_create_admin.php# Admin: create service request
-│   ├── service_status_update.php# Update service status
-│   ├── services_admin.php      # Admin: list all service requests
-│   ├── services_user.php       # User: list own service requests
-│   ├── residents_admin.php     # Admin: list residents
-│   ├── admin_summary.php       # Admin: dashboard statistics
-│   └── activity_admin.php      # Admin: activity logs
-│
-├── src/                        # React Frontend
-│   ├── App.jsx                 # Root component with routing
-│   ├── main.jsx                # Application entry point
-│   ├── assets/                 # Static assets (logo, room images)
-│   ├── components/             # React components
-│   │   ├── home/               # Landing page sections
-│   │   │   ├── HeroSection.jsx
-│   │   │   ├── FeaturesSection.jsx
-│   │   │   ├── AboutSection.jsx
-│   │   │   ├── AmenitiesSection.jsx
-│   │   │   ├── BuildingOverview.jsx
-│   │   │   ├── CTASection.jsx
-│   │   │   └── TestimonialsSection.jsx
-│   │   ├── admin/              # Admin panel components
-│   │   │   ├── AdminPanel.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   ├── TopBar.jsx
-│   │   │   ├── DashboardOverview.jsx
-│   │   │   ├── RoomsManagement.jsx
-│   │   │   ├── BookingsManagement.jsx
-│   │   │   ├── ResidentsManagement.jsx
-│   │   │   ├── UsersManagement.jsx
-│   │   │   ├── ServicesRequests.jsx
-│   │   │   ├── FloorsOverview.jsx
-│   │   │   ├── ActivityLogs.jsx
-│   │   │   └── Settings.jsx
-│   │   ├── Navbar.jsx          # Top navigation bar
-│   │   ├── Footer.jsx          # Site footer
-│   │   ├── AuthPage.jsx        # Login/Register page
-│   │   ├── RoomsPage.jsx       # Room listing & filtering
-│   │   ├── RoomDetails.jsx     # Individual room view + booking
-│   │   ├── Profile.jsx         # User dashboard/profile
-│   │   ├── Services.jsx        # Service request management
-│   │   ├── BookingStatus.jsx   # Booking tracking component
-│   │   ├── PaymentModal.jsx    # Payment flow modal
-│   │   ├── PaymentHistory.jsx  # Payment records
-│   │   └── ...                 # Other shared components
-│   ├── context/
-│   │   └── DataContext.jsx     # Global state management
-│   ├── hooks/                  # Custom React hooks
-│   ├── lib/                    # Utility libraries
-│   └── styles/                 # CSS files
-│       ├── main.css            # Core application styles
-│       ├── theme.css           # Theme variables & design tokens
-│       ├── fonts.css           # Font imports
-│       └── tailwind.css        # TailwindCSS imports
-│
-├── database.sql                # Full database schema + seed data
-├── package.json                # Node.js dependencies
-├── vite.config.mjs             # Vite build configuration
-├── tailwind.config.js          # TailwindCSS configuration
-├── postcss.config.js           # PostCSS configuration
-└── index.html                  # HTML entry point
 ```
 
 ---
@@ -261,19 +155,19 @@ This will install all required packages: React, Vite, TailwindCSS, Framer Motion
 
 ### Step 4: Verify Database Configuration
 
-The database connection is configured in `api/config.php`. Default settings:
+The database connection is configured in `api/config.php`. Settings:
 
 ```php
 DB_HOST = 'localhost'
 DB_NAME = 'nexstay'
 DB_USER = 'root'
 DB_PASS = ''           // Default XAMPP has no password
-DB_PORT = 3307         // Tries this first
-DB_PORT_ALT = 3306     // Falls back to this
+DB_PORT = 3307         // Non-default port (used in this project)
+DB_PORT_ALT = 3306     // Falls back to default port
 ```
 
-> [!NOTE]
-> The system auto-detects your MySQL port (3306 or 3307). No manual changes needed for standard XAMPP installations.
+> [!IMPORTANT]
+> This project uses MySQL port **3307** (non-default). The system tries port 3307 first and falls back to the default port 3306 automatically. If your MySQL runs on a different port, update `DB_PORT` in `api/config.php`.
 
 ---
 
@@ -321,19 +215,16 @@ npm run preview
 
 ## 👤 Default Accounts
 
-After importing `database.sql`, you need to **register** your first account:
+By default, there is no hardcoded admin account for security reasons.
 
 ### Creating an Admin Account
 
-1. Register a normal user account at [http://localhost:5173/auth](http://localhost:5173/auth)
+1. Register a normal user account at [http://localhost:5173/auth](http://localhost:5173/auth) using:
+   - **Email:** `admin@nexstay.com`
+   - **Password:** `admin123`
 2. Open **phpMyAdmin** → select `nexstay` database → `users` table
 3. Change the user's `role` from `user` to `admin`
-
-```sql
-UPDATE users SET role = 'admin' WHERE email = 'your_email@example.com';
-```
-
-4. Refresh/re-login — you'll be redirected to the Admin Dashboard
+4. You can now login to the admin panel using this username and password.
 
 ### Creating a Regular User
 
@@ -503,62 +394,62 @@ All API endpoints are PHP files located in the `/api` directory. They accept and
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/register.php` | Register a new user |
-| `POST` | `/api/login.php` | Login (creates session) |
-| `POST` | `/api/logout.php` | Destroy session |
-| `GET`  | `/api/user_current.php` | Get current logged-in user |
+| `GET/POST` | `/api/register.php` | Register a new user |
+| `GET/POST` | `/api/login.php` | Login (creates session) |
+| `GET/POST` | `/api/logout.php` | Destroy session |
+| `GET/POST` | `/api/user_current.php` | Get current logged-in user |
 
 ### Rooms
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET`  | `/api/rooms.php` | List all rooms (with filters) |
-| `GET`  | `/api/room_get.php?id=X` | Get room details by ID |
-| `POST` | `/api/room_create.php` | Admin: Create a room |
-| `POST` | `/api/room_update.php` | Admin: Update a room |
-| `POST` | `/api/room_delete.php` | Admin: Delete a room |
-| `GET`  | `/api/room_availability.php` | Check room availability |
+| `GET/POST` | `/api/rooms.php` | List all rooms (with filters) |
+| `GET/POST` | `/api/room_get.php?id=X` | Get room details by ID |
+| `GET/POST` | `/api/room_create.php` | Admin: Create a room |
+| `GET/POST` | `/api/room_update.php` | Admin: Update a room |
+| `GET/POST` | `/api/room_delete.php` | Admin: Delete a room |
+| `GET/POST` | `/api/room_availability.php` | Check room availability |
 
 ### Bookings
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/booking_create.php` | Create a booking request |
-| `POST` | `/api/booking_approve.php` | Admin: Approve a booking |
-| `POST` | `/api/booking_cancel.php` | Cancel a booking |
-| `GET`  | `/api/bookings_user.php` | List current user's bookings |
-| `GET`  | `/api/bookings_admin.php` | Admin: List all bookings |
+| `GET/POST` | `/api/booking_create.php` | Create a booking request |
+| `GET/POST` | `/api/booking_approve.php` | Admin: Approve a booking |
+| `GET/POST` | `/api/booking_cancel.php` | Cancel a booking |
+| `GET/POST` | `/api/bookings_user.php` | List current user's bookings |
+| `GET/POST` | `/api/bookings_admin.php` | Admin: List all bookings |
 
 ### Payments
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/payment_initiate.php` | Initiate a payment |
-| `POST` | `/api/payment_update.php` | Update payment details |
-| `POST` | `/api/payment_verify.php` | Admin: Verify a payment |
-| `GET`  | `/api/payments_user.php` | List current user's payments |
-| `GET`  | `/api/payments_admin.php` | Admin: List all payments |
+| `GET/POST` | `/api/payment_initiate.php` | Initiate a payment |
+| `GET/POST` | `/api/payment_update.php` | Update payment details |
+| `GET/POST` | `/api/payment_verify.php` | Admin: Verify a payment |
+| `GET/POST` | `/api/payments_user.php` | List current user's payments |
+| `GET/POST` | `/api/payments_admin.php` | Admin: List all payments |
 
 ### Service Requests
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/service_create.php` | Submit a service request |
-| `POST` | `/api/service_status_update.php` | Update request status |
-| `GET`  | `/api/services_user.php` | List user's service requests |
-| `GET`  | `/api/services_admin.php` | Admin: List all requests |
+| `GET/POST` | `/api/service_create.php` | Submit a service request |
+| `GET/POST` | `/api/service_status_update.php` | Update request status |
+| `GET/POST` | `/api/services_user.php` | List user's service requests |
+| `GET/POST` | `/api/services_admin.php` | Admin: List all requests |
 
 ### Users & Admin
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/user_update.php` | Update profile info |
-| `POST` | `/api/user_update_password.php` | Change password |
-| `GET`  | `/api/users_admin.php` | Admin: List all users |
-| `POST` | `/api/user_manage.php` | Admin: Manage user account |
-| `GET`  | `/api/admin_summary.php` | Admin: Dashboard stats |
-| `GET`  | `/api/residents_admin.php` | Admin: List residents |
-| `GET`  | `/api/activity_admin.php` | Admin: Activity logs |
+| `GET/POST` | `/api/user_update.php` | Update profile info |
+| `GET/POST` | `/api/user_update_password.php` | Change password |
+| `GET/POST` | `/api/users_admin.php` | Admin: List all users |
+| `GET/POST` | `/api/user_manage.php` | Admin: Manage user account |
+| `GET/POST` | `/api/admin_summary.php` | Admin: Dashboard stats |
+| `GET/POST` | `/api/residents_admin.php` | Admin: List residents |
+| `GET/POST` | `/api/activity_admin.php` | Admin: Activity logs |
 
 ---
 
@@ -566,14 +457,14 @@ All API endpoints are PHP files located in the `/api` directory. They accept and
 
 ### Database Configuration (`api/config.php`)
 
-| Constant | Default | Description |
-|----------|---------|-------------|
+| Constant | Value | Description |
+|----------|-------|-------------|
 | `DB_HOST` | `localhost` | MySQL server host |
 | `DB_NAME` | `nexstay` | Database name |
 | `DB_USER` | `root` | MySQL username |
 | `DB_PASS` | *(empty)* | MySQL password |
-| `DB_PORT` | `3307` | Primary MySQL port |
-| `DB_PORT_ALT` | `3306` | Fallback MySQL port |
+| `DB_PORT` | `3307` | Primary MySQL port **(non-default)** |
+| `DB_PORT_ALT` | `3306` | Fallback port (default MySQL port) |
 
 ### Vite Configuration (`vite.config.mjs`)
 
@@ -585,70 +476,12 @@ All API endpoints are PHP files located in the `/api` directory. They accept and
 
 ### Customizing MySQL Port
 
-If your MySQL runs on a non-standard port, edit `api/config.php`:
+This project is configured to use port **3307** (non-default). If your MySQL runs on the standard port `3306`, the system will fall back to it automatically. To use a completely different port, edit `api/config.php`:
 
 ```php
-const DB_PORT     = 3306;    // Change to your port
-const DB_PORT_ALT = 3307;    // Change fallback port
+const DB_PORT     = YOUR_PORT;  // Primary port to try first
+const DB_PORT_ALT = 3306;       // Fallback port
 ```
-
----
-
-## ❓ Troubleshooting
-
-<details>
-<summary><b>🔴 "Database connection failed" error</b></summary>
-
-1. Ensure MySQL is running in XAMPP Control Panel
-2. Verify the `nexstay` database exists in phpMyAdmin
-3. Check `api/config.php` — ensure the port matches your MySQL port
-4. Default XAMPP MySQL uses port `3306` — update `DB_PORT` if needed
-</details>
-
-<details>
-<summary><b>🔴 White/blank page on localhost:5173</b></summary>
-
-1. Open browser DevTools (F12) → Console tab for errors
-2. Ensure `npm install` completed without errors
-3. Try deleting `node_modules` and running `npm install` again:
-   ```bash
-   rmdir /s /q node_modules
-   npm install
-   npm run dev
-   ```
-</details>
-
-<details>
-<summary><b>🔴 API calls return 404 or CORS errors</b></summary>
-
-1. Ensure XAMPP Apache is running
-2. Verify the project is in `C:\xampp\htdocs\Apart\`
-3. The Vite proxy in `vite.config.mjs` forwards `/api/*` to `http://localhost/Apart`
-4. Test API directly: [http://localhost/Apart/api/rooms.php](http://localhost/Apart/api/rooms.php)
-</details>
-
-<details>
-<summary><b>🔴 "npm run dev" fails with ENOENT</b></summary>
-
-1. Make sure you're in the project directory (`C:\xampp\htdocs\Apart`)
-2. Run `npm install` first
-3. Ensure Node.js 18+ is installed: `node --version`
-</details>
-
-<details>
-<summary><b>🟡 Rooms show "No Image" placeholder</b></summary>
-
-Room images are stored in `src/assets/`. The default seed data references `Upload/Room.png`. Make sure the image assets exist or update the paths in the database.
-</details>
-
-<details>
-<summary><b>🟡 Can't access Admin Panel</b></summary>
-
-1. Login to your account
-2. Open phpMyAdmin → `nexstay` → `users` table
-3. Set your user's `role` to `admin`
-4. Refresh the page or re-login
-</details>
 
 ---
 
@@ -677,12 +510,6 @@ Contributions are welcome! Here's how:
 - React components use functional components with hooks
 - Use TailwindCSS utility classes for styling
 - Test both user and admin workflows after changes
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
