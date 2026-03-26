@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@layer base {
+    :root {
+        --font-heading: 'Outfit', sans-serif;
+        --font-body: 'Plus Jakarta Sans', sans-serif;
+        --font-size: 16px;
+
+        /* User-Defined Lavender Palette */
+        --background: #F5EFFF;
+        /* Lightest Lavender/White */
+        --foreground: #1e1b4b;
+        /* Dark Indigo for text readability */
+
+        --card: #ffffff;
+        --card-foreground: #1e1b4b;
+
+        --popover: #ffffff;
+        --popover-foreground: #1e1b4b;
+
+        --primary: #A294F9;
+        /* Darkest Lavender provided */
+        --primary-foreground: #ffffff;
+
+        --secondary: #E5D9F2;
+        /* Medium-Light Lavender */
+        --secondary-foreground: #1e1b4b;
+
+        --muted: #E5D9F2;
+        --muted-foreground: #6d28d9;
+
+        --accent: #CDC1FF;
+        /* Medium Lavender */
+        --accent-foreground: #1e1b4b;
+
+        --destructive: #ef4444;
+        --destructive-foreground: #ffffff;
+
+        --border: #CDC1FF;
+        /* Using accent color for borders */
+        --input: #E5D9F2;
+        --ring: #A294F9;
+
+        --radius: 0.75rem;
+
+        /* Sidebar specific */
+        --sidebar: #ffffff;
+        --sidebar-foreground: #1e1b4b;
+        --sidebar-primary: #A294F9;
+        --sidebar-primary-foreground: #ffffff;
+        --sidebar-accent: #F5EFFF;
+        --sidebar-accent-foreground: #1e1b4b;
+        --sidebar-border: #E5D9F2;
+        --sidebar-ring: #A294F9;
+    }
+
+    /* Force Dark Mode to use the SAME User-Defined Palette (No Black/Gold) */
+    .dark {
+        --background: #F5EFFF;
+        --foreground: #1e1b4b;
+        --card: #ffffff;
+        --card-foreground: #1e1b4b;
+        --popover: #ffffff;
+        --popover-foreground: #1e1b4b;
+        --primary: #A294F9;
+        --primary-foreground: #ffffff;
+        --secondary: #E5D9F2;
+        --secondary-foreground: #1e1b4b;
+        --muted: #E5D9F2;
+        --muted-foreground: #6d28d9;
+        --accent: #CDC1FF;
+        --accent-foreground: #1e1b4b;
+        --destructive: #ef4444;
+        --destructive-foreground: #ffffff;
+        --border: #CDC1FF;
+        --input: #E5D9F2;
+        --ring: #A294F9;
+
+        --sidebar: #ffffff;
+        --sidebar-foreground: #1e1b4b;
+        --sidebar-primary: #A294F9;
+        --sidebar-primary-foreground: #ffffff;
+        --sidebar-accent: #F5EFFF;
+        --sidebar-accent-foreground: #1e1b4b;
+        --sidebar-border: #E5D9F2;
+        --sidebar-ring: #A294F9;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    html {
+        font-size: var(--font-size);
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    label,
+    button,
+    input {
+        @apply font-body;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    input {
+        font-weight: 400;
+    }
+}

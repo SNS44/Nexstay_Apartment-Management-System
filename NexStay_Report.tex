@@ -1,0 +1,393 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=1.5in, right=1in, top=1in, bottom=1in}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{float}
+\usepackage{hyperref}
+
+\onehalfspacing
+
+\begin{document}
+
+% COVER PAGE
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \Large{\textbf{NEXSTAY APARTMENT MANAGEMENT SYSTEM}}\\
+        \vspace{1.5cm}
+        \normalsize{A MINI PROJECT REPORT}\\
+        \vspace{0.5cm}
+        Submitted by\\
+        \vspace{0.5cm}
+        \textbf{P1 (Reg No: XXX)}\\
+        \textbf{P2 (Reg No: XXX)}\\
+        \textbf{P3 (Reg No: XXX)}\\
+        \textbf{P4 (Reg No: XXX)}\\
+        \vspace{1.5cm}
+        to\\
+        \vspace{0.5cm}
+        the APJ Abdul Kalam Technological University in partial fulfilment of the requirements for the award of the Degree\\
+        of\\
+        Bachelor of Technology in\\
+        Computer Science\\
+        \vspace{2cm}
+        \textbf{Department of Computer Science Engineering}\\
+        \textbf{College of Engineering}\\
+        \textbf{Trikaripur}\\
+        \textbf{APRIL 2025}
+    \end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+
+% DECLARATION
+\chapter*{DECLARATION}
+\addcontentsline{toc}{chapter}{DECLARATION}
+We undersigned hereby declare that the project report ``NexStay Apartment Management System'', submitted for partial fulfillment of the requirements for the award of degree of Bachelor of Technology of the APJ Abdul Kalam Technological University, Kerala is a bonafide work done by us under the supervision of [Guide Name], Assistant Professor, Department of CS. This submission represents our ideas in our own words and where ideas or words of others have been included, we have adequately and accurately cited and referenced the original sources. We also declare that we have adhered to ethics of academic honesty and integrity and have not misrepresented or fabricated any data or idea or fact or source in our submission. We understand that any violation of the above will be a cause for disciplinary action by the institute and/or the University and can also evoke penal action from the sources which have thus not been properly cited or from whom proper permission has not been obtained. This report has not been previously formed the basis for the award of any degree, diploma or similar title of any other University.
+
+\vspace{2cm}
+\noindent Place: Trikaripur \hfill Signature:\\
+\noindent Date: \hfill P1, P2, P3, P4
+
+\clearpage
+
+% CERTIFICATE
+\chapter*{CERTIFICATE}
+\addcontentsline{toc}{chapter}{CERTIFICATE}
+This is to certify that the report entitled ``NEXSTAY APARTMENT MANAGEMENT SYSTEM'', submitted by P1, P2, P3, P4 to the APJ Abdul Kalam Technological University in partial fulfillment of the requirements for the award of the Degree of Bachelor of Technology in Computer Science is a bonafide record of the project carried out by them under my guidance and supervision. This report in any form has not been submitted to any other University or Institute for any purpose.
+
+\vspace{3cm}
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Internal Supervisor(s)}\\
+{[Guide Name]}\\
+Assistant Professor\\
+Dept. of CSE
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\begin{flushright}
+\textbf{Head of the Department}\\
+{[HOD Name]}\\
+Head of Department\\
+Dept. of CSE
+\end{flushright}
+\end{minipage}
+
+\vspace{2cm}
+\noindent
+\textbf{PG Coordinator}\\
+{[Coordinator Name]}
+
+\clearpage
+
+% ACKNOWLEDGEMENT
+\chapter*{ACKNOWLEDGEMENT}
+\addcontentsline{toc}{chapter}{ACKNOWLEDGEMENT}
+We give honour and praise to the Almighty who gave us wisdom and enabled us to complete this mini project successfully.
+
+We would like to thank the Department of Computer Science Engineering, College of Engineering Trikaripur, for giving us the opportunity to present this project.
+
+We would like to express our deep gratitude to our Head of Department and our Project Coordinator for their timely suggestions and encouragement through the processes involved in the presentation of the project for their wholehearted support and encouragement for the betterment of the presentation and report preparation.
+
+We are profoundly indebted to our Project Guide, for their exemplary guidance, criticism, monitoring, and constant encouragement throughout the course.
+
+Last, but not the least, we express our heartfelt thanks to our friends and parents for their support and encouragement during this endeavour.
+
+\vspace{2cm}
+\begin{flushright}
+P1\\P2\\P3\\P4
+\end{flushright}
+
+\clearpage
+
+% VISION & MISSION
+\chapter*{VISION AND MISSION}
+\addcontentsline{toc}{chapter}{VISION AND MISSION}
+\textbf{VISION (Institution)}\\
+To be a premier institution in education and research for moulding technically competent and socially committed professionals.
+
+\vspace{0.5cm}
+\textbf{MISSION (Institution)}\\
+\begin{itemize}
+    \item Promote interdisciplinary research and innovation so as to meet the current needs of industry and society.
+    \item Attract, nurture and retain the best faculty and technical man power.
+    \item Provide state of art facilities for quality technical education.
+    \item Develop personality and professional skills of the students through interaction with alumni, academia, and industry.
+\end{itemize}
+
+\vspace{1cm}
+\textbf{VISION (Department)}\\
+To mould technically competent and socially committed professionals in the field of computer science.
+
+\vspace{0.5cm}
+\textbf{MISSION (Department)}\\
+\begin{itemize}
+    \item To provide a strong foundation in theoretical and practical aspects of computer science.
+    \item To impart technical skills necessary to generate quality professionals according to industry needs.
+    \item To develop human resource with the ability to apply the knowledge for the benefit of the society.
+\end{itemize}
+
+\clearpage
+
+% ABSTRACT
+\chapter*{ABSTRACT}
+\addcontentsline{toc}{chapter}{ABSTRACT}
+In the modern urbanization era, residential complexes and apartments are growing in size and complexity, demanding efficient and reliable management systems. NexStay is a comprehensive web-based Apartment Management System specifically designed to streamline the administration and daily operations of modern residential communities. It provides an integrated digital platform mapping out floor plans, monitoring room statuses, managing user bookings, and accepting payments seamlessly.
+
+NexStay features a highly secure authentication system and robust role-based dashboards utilizing React, Vite, and an interactive glassmorphism UI styled with Tailwind CSS. On the server side, it leverages PHP for stable API endpoints and MySQL for resilient data storage handling room bookings, financial payments, and user activity auditing. The core modules include digital rent and utility bill payments, booking verifications, priority-based service request ticketing, and an exhaustive activity log tracking system. 
+
+By replacing conventional manual record-keeping with an interconnected digital environment, NexStay significantly reduces the administrative burden on property managers and vastly enhances transparency. This project advances real estate administration by offering a unified, visually premium, and user-centric application that guarantees improved operational efficiency for modern apartments.
+
+\clearpage
+
+% CONTENTS
+\tableofcontents
+\clearpage
+
+% LIST OF FIGURES
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\clearpage
+
+\pagenumbering{arabic}
+
+% CHAPTER 1: INTRODUCTION
+\chapter{INTRODUCTION}
+
+\section{Background}
+Managing an apartment complex involves numerous administrative and operational tasks, including resident management, flat and room assignments, rent collection, and maintenance scheduling. Traditionally, these processes have been handled manually using ledgers, paper notices, and basic spreadsheet software. This conventional approach is not only time-consuming but also prone to human error, missed maintenance requests, and payment discrepancies. 
+
+With the rapid advancement in digital technologies, there is a growing need for automated systems capable of tracking room occupancies and maintaining an audit log for financial transactions and service requests. NexStay addresses these challenges through a unified web-based platform. It centralizes apartment floor-plans and room bookings, facilitating organized interactions between the management committee and residents.
+
+\section{Scope}
+The scope of NexStay extends comprehensively to administrative staff (admins) and apartment residents (users). For users, the system offers a hassle-free experience to browse available rooms across multiple floors, make monthly duration bookings, submit service requests with given priorities (Normal, High, Urgent), and manage fee payments. For administrators, it provides a centralized dashboard to track room occupancy (Available, Booked, Occupied, Maintenance), approve or reject booking requests, monitor the payment gateway statuses, and review system-wide user activity logs to prevent fraud. 
+
+\section{Objective}
+The primary objective of the NexStay Apartment Management System is to modernize and automate the lifecycle of apartment rentals. Specific objectives include:
+\begin{itemize}
+    \item To develop an interconnected database capable of associating floors, rooms, residents, and financial transactions dynamically.
+    \item To enforce a stringent booking and approval workflow verified by the admin layer.
+    \item To implement a transparent ticketing architecture allowing users to submit detailed service requests linked to their specific rooms.
+    \item To secure financial operations with a comprehensive digital payment and verification system recorded in a tamper-resistant booking audit log.
+    \item To deploy a state-of-the-art UI offering premium visual aesthetics utilizing a glassmorphism design for optimal resident engagement.
+\end{itemize}
+
+\section{Proposed System}
+The proposed NexStay system utilizes a secure backend architecture via well-defined PHP API endpoints functioning independently from the React-driven frontend. Users register and receive a unique profile tailored to their resident status. They interact with dynamic interfaces to request room bookings, prompting admin authorization. Upon approval, their status shifts to resident, granting access to the payment gateway and service request modules. The system records all critical user actions (e.g., booking approvals, payments, status modifications) producing a transparent activity trace, drastically reducing the scope for operational disputes.
+
+% CHAPTER 2: SRS
+\chapter{SYSTEM REQUIREMENTS SPECIFICATION}
+
+\section{Product Overview}
+NexStay is a high-performance web application constructed to govern residential allocations efficiently. It operates primarily as a centralized management engine bridging apartment owners/admins and current/prospective tenants. The application accepts structured queries including room reservations, real-time payment submissions, and service ticketing. It processes these through a PHP logic layer and executes mutations within a normalized MySQL database, subsequently generating updated dashboards, invoices, and service itineraries.
+
+\sectionsection{Product Functionality}
+The system defines distinct roles and functionalities for its users:
+
+\textbf{User: Administrator}\\
+The Administrator functions as the ultimate authority within NexStay. Administrative functionalities include:
+\begin{itemize}
+    \item Creating, modifying, and tracking the status of Floors and distinct Rooms (Available, Occupied, Maintenance).
+    \item Reviewing pending resident ``Bookings'' and determining an Approve/Reject status.
+    \item Monitoring the comprehensive ``Payments'' ledger to perform transaction verifications against gateway responses.
+    \item Addressing incoming ``Service Requests'', assigning work tasks, and marking jobs as Completed. 
+    \item Observing comprehensive ``Booking Audit Logs'' and ``User Activity'' trackers for security and auditing purposes.
+\end{itemize}
+
+\textbf{User: Resident (User)}\\
+A resident interacts with the localized features of the platform tailored to their tenancy. Their functionalities include:
+\begin{itemize}
+    \item Navigating the available rooms and submitting a Booking Request defining duration and move-in dates.
+    \item Executing payments securely via the integrated platform (supporting varied methods like UPI or standard transfers) for their monthly dues.
+    \item Raising categorized Service/Maintenance Requests with precise urgency definitions (Normal, High, Urgent).
+    \item Reviewing their personal dashboard for payment histories and actionable booking statuses.
+\end{itemize}
+
+\section{Design and Implementation Constraints}
+\begin{itemize}
+    \item \textbf{Security Constraints:} Critical user actions require strict tokenized authentication processes via PHP sessions. Actions modifying financial data must be tracked by an immutable Audit Log.
+    \item \textbf{Frontend Constraints:} The user interface relies heavily on modern CSS modules (Tailwind, Framer Motion); thus, the client browser must support recent HTML5/CSS3 specifications to render the glassmorphism UI correctly.
+    \item \textbf{Database Normalization:} Strict relational integrity must be maintained. To prevent orphaned records, foreign key constraints (\texttt{ON DELETE CASCADE}, \texttt{ON DELETE SET NULL}) are rigidly enforced across interdependent tables like \texttt{bookings}, \texttt{payments}, and \texttt{rooms}.
+\end{itemize}
+
+\section{Hardware Requirements}
+\begin{itemize}
+    \item \textbf{Server Side:} Minimum 2 GHz dual-core CPU, 2GB RAM, 20GB Storage capable of running Apache/Nginx.
+    \item \textbf{Client Side:} Standard personal computer or mobile device with a minimum of 4GB RAM to smoothly render complex UI motion architectures.
+    \item \textbf{Display:} Optimized for resolutions of 1280x720 and above.
+\end{itemize}
+
+\section{Software Requirements}
+\begin{itemize}
+    \item \textbf{Frontend Technologies:} HTML5, CSS3, JavaScript (ES6), React.js (\textasciicircum 18.2.0), Vite framework, Tailwind CSS (\textasciicircum 3.4.1), Lucide React (for uniform iconography), and Framer Motion (\textasciicircum 12.0.0) for micro-interactions.
+    \item \textbf{Backend Technologies:} PHP 8.x for API development and endpoint orchestration.
+    \item \textbf{Database Management:} MySQL Server / MariaDB providing cross-relational mapping.
+    \item \textbf{Operating System:} Cross-platform (Windows/Linux/macOS) due to web-based nature.
+\end{itemize}
+
+\section{Functional Requirements}
+\textbf{USER MODULE:}
+\begin{itemize}
+    \item \textbf{Register \& Login:} Users must register on the platform and securely log in to access the apartment management system and their personalized dashboard.
+    \item \textbf{Booking Management:} Users can seamlessly browse available rooms across multiple floors, submit a move-in booking request for a specific duration, and track the approval status of their requests.
+    \item \textbf{Payment Gateway Interface:} Users can view their pending monthly rent or maintenance dues, initiate secure digital transactions, and review their complete payment history.
+    \item \textbf{Service Request System:} Residents can generate categorized maintenance or service complaints related directly to their occupied room, assign an urgency level (Normal, High, Urgent), and track the resolution progress.
+\end{itemize}
+
+\textbf{ADMIN MODULE:}
+\begin{itemize}
+    \item \textbf{Facility Management:} Administrators can dynamically add new floors or rooms to the system, update room details, and manage occupancy statuses (Available, Booked, Occupied, Maintenance).
+    \item \textbf{Tenant Authorizations:} Administrators can review all incoming room booking requests from users and have the authority to process, approve, or reject them.
+    \item \textbf{Financial Oversight:} Administrators can verify digital payments accurately retrieved from external gateways, monitor total revenue collected, and manage tenant transactions.
+    \item \textbf{Audit Tool:} Administrators have access to comprehensive system-wide summaries, granular user activity traces, and secure booking audit logs to prevent fraud and ensure operational transparency.
+\end{itemize}
+
+% CHAPTER 3: MATERIALS AND METHODS
+\chapter{MATERIALS AND METHODS}
+
+\section{Design Phase}
+The design paradigm of NexStay adheres strictly to separating the visual presentation layer from the data management layer. By utilizing React/Vite, the UI is broken into reusable components (like cards and modals). Simultaneously, the database undergoes rigorous Entity-Relationship mapping ensuring minimal data redundancy across its distinct 8 tables (\texttt{users}, \texttt{floors}, \texttt{rooms}, \texttt{bookings}, \texttt{payments}, \texttt{service\_requests}, \texttt{user\_activity}, \texttt{booking\_audit\_log}). 
+
+\section{Data Flow Diagram}
+The Data Flow Diagram (DFD) maps the trajectory of transactional requests. It isolates user inputs (e.g., a booking request including expected duration and monthly cost), passing through the PHP verification logic layer, inserting a 'Pending' index in the \texttt{bookings} table, which subsequently triggers an alert routed to the Administrator's interface for approval.
+\vspace{0.5cm}\\
+\textit{(Note: Place Figure 3.1 - Data Flow Diagram level 0 and 1 here. Display the logical flow from `user` pushing requests (rooms, payments, service) into the PHP API Layer, storing into MySQL, and retrieving back via Admin API calls. Mention where it comes: Chapter 3, section 3.2)}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{dfd_placeholder.png} 
+    \vspace{5cm} % Placeholder space
+    \caption{Data Flow Diagram}
+    \label{fig:dfd}
+\end{figure}
+
+\section{Activity Diagram}
+Activity pathways dictate the user journey. The primary activity stream models the rental timeline: 1. User logs in $>$ 2. Views standard UI layout $>$ 3. Filters available room statuses $>$ 4. Submits move-in request $>$ 5. Waits for system generated Admin status modification $>$ 6. Status transits to 'Approved' $>$ 7. User proceeds to Execute Payment.
+\vspace{0.5cm}\\
+\textit{(Note: Place Figure 3.2 - Activity Diagram here. Mention where it comes: Chapter 3, section 3.3)}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{activity_placeholder.png}
+    \vspace{5cm}
+    \caption{Activity Diagram}
+    \label{fig:activity}
+\end{figure}
+
+\section{Use Case Diagram}
+The Use Cases segregate the interactions by Actor permission. Standard Users utilize \texttt{Register}, \texttt{Submit Booking}, \texttt{Make Payment}, and \texttt{Raise Service Ticket}. Administrative Actors utilize \texttt{Approve/Cancel Booking}, \texttt{Manage Floor/Room Schemas}, \texttt{Verify Payments}, and \texttt{Review Audit Logs}.
+\vspace{0.5cm}\\
+\textit{(Note: Place Figure 3.3 - Use Case Diagram here. Mention where it comes: Chapter 3, section 3.4)}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{usecase_placeholder.png}
+    \vspace{5cm}
+    \caption{Use Case Diagram}
+    \label{fig:usecase}
+\end{figure}
+
+\section{Database Design}
+The internal structure leverages InnoDB for high reliability. The architecture is deeply interdependent: 
+\begin{itemize}
+    \item The \texttt{rooms} table inherits IDs from \texttt{floors}. 
+    \item The \texttt{bookings} table fuses foreign keys from both \texttt{users} and \texttt{rooms}. 
+    \item The \texttt{payments} and \texttt{service\_requests} tables demand active bindings to specific \texttt{user\_id}s and \texttt{room\_id}s. 
+    \item The \texttt{booking\_audit\_log} records exact schema shifts tracking \texttt{action\_by}, \texttt{old\_status}, and \texttt{new\_status}.
+\end{itemize}
+\vspace{0.5cm}\\
+\textit{(Note: Place Figure 3.4 - Entity Relationship (ER) Diagram or Database Schema here. Mention where it comes: Chapter 3, section 3.5)}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{db_placeholder.png}
+    \vspace{5cm}
+    \caption{Database Design}
+    \label{fig:dbdesign}
+\end{figure}
+
+% CHAPTER 4: IMPLEMENTATION
+\chapter{IMPLEMENTATION}
+The implementation phase synthesizes code logic and UI mapping into a deployable entity. 
+
+\textbf{Frontend Construction:} Bootstrapped via Vite, the frontend is sculpted with React logic injecting \texttt{useState} and \texttt{useEffect} hooks for dynamic page rendering. Tailwind CSS was meticulously structured in \texttt{tailwind.config.js} to support the custom glassmorphism aesthetic—utilizing transparent backgrounds, background-blur filters, and gradient borders to render visual depth. \texttt{framer-motion} animates transitions between page states flawlessly.
+
+\textbf{Backend Construction:} The endpoints are coded independently as modular PHP structures to ensure scalability and ease of maintenance. They utilize secure database connection strings with comprehensive \texttt{try-catch} blocks protecting queries. Stringent authentication protocols enforce session checks before granting access or returning any sensitive payload responses.
+
+\textbf{Database Deployment:} Formulated natively using MySQL. Constraints guarantee database scaling while restricting anomalous actions, such as \texttt{ON DELETE CASCADE} which immediately resolves abandoned service requests if a particular room or user is removed from instances.
+
+\vspace{0.5cm}\\
+\textit{(Note: Place UI Screenshots here: Figure 4.1 Home Page displaying Framer Motion features, Figure 4.2 Resident Dashboard showing Bookings, Figure 4.3 Admin Dashboard executing Payment Verifications. Mention where they come: Chapter 4)}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{home_placeholder.png}
+    \vspace{5cm}
+    \caption{Home Page Interface}
+    \label{fig:home}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{user_dash_placeholder.png}
+    \vspace{5cm}
+    \caption{Resident Dashboard}
+    \label{fig:userdash}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{admin_dash_placeholder.png}
+    \vspace{5cm}
+    \caption{Admin Dashboard}
+    \label{fig:admindash}
+\end{figure}
+
+
+% CHAPTER 5: RESULTS AND DISCUSSIONS
+\chapter{RESULTS AND DISCUSSIONS}
+The synthesis of advanced frontend libraries overlapping a structured PHP backend succeeded in providing a high-fidelity Apartment Management environment.
+
+\textbf{Performance \& Logic Verification:} Stress tests validating the transactional logic proved that overlapping room bookings were effectively prevented by the \texttt{status} checks inherent within PHP endpoints. The booking workflow seamlessly transposed users from an unassigned state into active 'Resident' states exclusively via Administrative approvals.
+
+\textbf{Financial Integration:} The payment verification pipeline effectively secured the financial ledger. Administrators successfully utilized the centralized payment overview to cross-reference digital transactions generated by residents, proving the system highly robust against phantom inputs and unauthorized manipulations. 
+
+\textbf{UI Responsiveness and User Experience:} Testing confirmed the Tailwind-based layout maintained its structural and aesthetic integrity across mobile, tablet, and desktop viewports. The glassmorphism design approach was overwhelmingly effective in modernizing the user interaction space, abandoning the traditional drab database-driven visual styles common in administrative software.
+
+% CHAPTER 6: CONCLUSION
+\chapter{CONCLUSION}
+The NexStay Apartment Management System represents a significant structural advancement in multi-tenant administration. By systematically dissolving the reliance on disjointed manual processes and incorporating a highly secure, relational database model handled dynamically through PHP logic, it mitigates potential errors in bookkeeping and maintenance.
+
+The implementation successfully delivered a specialized architecture granting robust command paths for administrators to oversee room occupancy, accept payments, and monitor strict audit logs, while empowering residents to intuitively manage their tenancy securely. Going forward, NexStay's scalable modular code base paves a solid foundation for further integrations including automated email alerts, IoT facility locks, and advanced predictive maintenance arrays.
+
+% BIBLIOGRAPHY
+\renewcommand{\bibname}{BIBLIOGRAPHY}
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+
+\bibitem{vite} 
+Vitejs documentation: \url{https://vitejs.dev/}
+
+\bibitem{tailwind} 
+Tailwind CSS framework documentation: \url{https://tailwindcss.com/}
+
+\bibitem{framer}
+Framer Motion API Reference: \url{https://www.framer.com/motion/}
+
+\bibitem{php} 
+PHP Documentation Group. Manual: \url{https://www.php.net/manual/en/}
+
+\bibitem{mysql} 
+MySQL 8.0 Reference Manual: \url{https://dev.mysql.com/doc/refman/8.0/en/}
+
+\bibitem{sommerville}
+Ian Sommerville, \textit{Software Engineering}, Tenth Edition, Pearson, 2015.
+
+\end{thebibliography}
+
+\end{document}
